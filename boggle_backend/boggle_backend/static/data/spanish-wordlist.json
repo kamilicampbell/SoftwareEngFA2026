@@ -1,0 +1,24 @@
+{
+  "words": [
+    "casa", "mesa", "silla", "agua", "fuego", "tierra", "aire", "sol", "luna", "mar",
+    "rio", "lago", "monte", "valle", "campo", "flor", "arbol", "hoja", "rama", "raiz",
+    "pan", "sal", "vino", "leche", "carne", "fruta", "lima", "pera", "uva", "higo",
+    "gato", "perro", "pato", "toro", "vaca", "mula", "rana", "pez", "oso", "lobo",
+    "rojo", "azul", "verde", "negro", "blanco", "gris", "rosa", "cafe", "alto", "bajo",
+    "gran", "poco", "todo", "nada", "algo", "otro", "mismo", "nuevo", "viejo", "largo",
+    "amor", "vida", "muerte", "tiempo", "mundo", "hombre", "mujer", "nino", "padre", "madre",
+    "mano", "pie", "ojo", "boca", "nariz", "cara", "pelo", "voz", "alma", "mente",
+    "dia", "noche", "hora", "semana", "mes", "ano", "ayer", "hoy", "ahora", "luego",
+    "calle", "plaza", "puerta", "ventana", "techo", "suelo", "muro", "pared", "puente", "camino",
+    "libro", "carta", "papel", "pluma", "tinta", "letra", "palabra", "frase", "texto", "nota",
+    "canto", "baile", "juego", "fiesta", "musica", "arte", "obra", "imagen", "color", "forma",
+    "frio", "calor", "viento", "lluvia", "nieve", "niebla", "tormenta", "rayo", "trueno", "hielo",
+    "ciudad", "pueblo", "nacion", "region", "zona", "lugar", "sitio", "punto", "lado", "parte",
+    "comer", "beber", "dormir", "correr", "saltar", "nadar", "volar", "caer", "subir", "bajar",
+    "hablar", "escuchar", "mirar", "tocar", "oler", "sentir", "pensar", "saber", "poder", "querer",
+    "dar", "tomar", "llevar", "traer", "poner", "sacar", "abrir", "cerrar", "entrar", "salir",
+    "ser", "estar", "tener", "hacer", "decir", "ver", "ir", "venir", "pasar", "quedar",
+    "bien", "mal", "mejor", "peor", "mas", "menos", "muy", "poco", "casi", "solo",
+    "para", "por", "con", "sin", "sobre", "bajo", "entre", "hasta", "desde", "hacia"
+  ]
+}

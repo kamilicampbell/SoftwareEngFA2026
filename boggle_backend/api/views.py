@@ -36,10 +36,16 @@ class CreateGameBySizeView(APIView):
                 grid = random_grid(size)
                 now = datetime.now()
                 gname = f"Random{size}Grid:{now.strftime('%Y-%m-%d %H:%M:%S')}"
-                file_path = finders.find("data/full-wordlist.json")
+                if dictionary_language.lower() == "spanish":
+                    dict_file = "data/spanish-wordlist.json"
+                else:
+                    dict_file = "data/full-wordlist.json"
+                
+                file_path = finders.find(dict_file)
                 if not file_path:
-                    raise Exception("Dictionary file not found.")
+                    raise Exception(f"Dictionary file not found for language: {dictionary_language}")
                 dictionary = read_json_to_list(file_path)
+                
                 mygame = Boggle(grid, dictionary)
                 foundwords = mygame.getSolution()
                 normalized = sorted({
