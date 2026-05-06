@@ -1,13 +1,21 @@
 .Found-solutions-list {
   text-align: center;
   margin: 25pt;
+  color: #e2e8f0;
+}
+
+.Found-solutions-list h4 {
+  color: #a78bfa;
+  font-size: 1.1rem;
 }
 
 .Found-solutions-list ul {
   list-style-type: none;
+  padding: 0;
 }
 
 .Found-solutions-list li {
   font-size: 14pt;
   line-height: 20pt;
+  color: #e2e8f0;
 }

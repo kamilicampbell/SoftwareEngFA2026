@@ -1,8 +1,29 @@
 .Guess-input {
-  border: 15px solid grey;
-  margin: 30px;
+  border: 2px solid #7c3aed;
+  border-radius: 12px;
+  margin: 30px auto;
   text-align: center;
   padding: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 400px;
+  background-color: #1f2028;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+}
+
+.Guess-input div {
+  margin-bottom: 15px;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.Guess-input .MuiOutlinedInput-input {
+  color: #ffffff !important;
+}
+
+.Guess-input .MuiInputLabel-root {
+  color: #a78bfa !important;
+}
+
+.Guess-input .MuiOutlinedInput-notchedOutline {
+  border-color: #7c3aed !important;
 }

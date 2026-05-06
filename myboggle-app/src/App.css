@@ -184,13 +184,15 @@
 }
 
 .App {
-  color: #282c34;
+  color: #e2e8f0;
   width: 60%;
   margin: auto;
+  padding-top: 20px;
 }
 
 .App-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #ffffff;
 }

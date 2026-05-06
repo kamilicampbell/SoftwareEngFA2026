@@ -1,13 +1,17 @@
 .Summary-results-list {
   text-align: center;
   margin: 25pt;
+  color: #e2e8f0;
 }
 
-.Summary-results-list ul {
-  list-style-type: none;
+.Summary-results-list h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
 }
 
 .Summary-results-list li {
   font-size: 14pt;
   line-height: 20pt;
+  color: #e2e8f0;
+  list-style: none;
 }
