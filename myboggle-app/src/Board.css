@@ -1,0 +1,20 @@
+.Board-div {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Board-container {
+  width: fit-content;
+}
+
+.Tile .MuiPaper-root {
+  width: 90px;
+  height: 90px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

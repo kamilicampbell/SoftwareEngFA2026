@@ -1,0 +1,13 @@
+.Summary-results-list {
+  text-align: center;
+  margin: 25pt;
+}
+
+.Summary-results-list ul {
+  list-style-type: none;
+}
+
+.Summary-results-list li {
+  font-size: 14pt;
+  line-height: 20pt;
+}
