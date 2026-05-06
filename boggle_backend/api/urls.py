@@ -6,9 +6,13 @@ from .views import (
     GameLeaderBoardView,
     GameDeleteView,
     LeaderBoardEntryDeleteView,
+    RegisterView,
+    LoginView,
 )
 
 urlpatterns = [
+    path("auth/register/", RegisterView.as_view(), name="register"),
+    path("auth/login/", LoginView.as_view(), name="login"),
     path("game/<int:size>/", CreateGameBySizeView.as_view(), name="create-game-by-size"),
     path("games/", GameListView.as_view(), name="game-list"),
     path("games/<uuid:id>/", GameDetailView.as_view(), name="game-detail"),

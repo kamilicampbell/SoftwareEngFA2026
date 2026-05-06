@@ -18,6 +18,8 @@ from .serializers import (
     LeaderBoardEntrySerializer,
     LeaderBoardSerializer,
 )
+from rest_framework.authtoken.models import Token
+from rest_framework.permissions import IsAuthenticated
 
 User = get_user_model()
 
@@ -133,6 +135,7 @@ class GameLeaderBoardView(APIView):
             status=status.HTTP_201_CREATED,
         )
 
+
 class GameDeleteView(APIView):
     permission_classes = [AllowAny]
 
@@ -154,4 +157,60 @@ class LeaderBoardEntryDeleteView(APIView):
         return Response(
             {"detail": "LeaderBoard entry deleted successfully."},
             status=status.HTTP_204_NO_CONTENT,
+        )
+
+
+class RegisterView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        username = request.data.get("username")
+        password = request.data.get("password")
+        email = request.data.get("email", "")
+
+        if not username or not password:
+            return Response(
+                {"detail": "Username and password are required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        if User.objects.filter(username=username).exists():
+            return Response(
+                {"detail": "Username already taken."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        user = User.objects.create_user(
+            username=username,
+            password=password,
+            email=email,
+        )
+        token, _ = Token.objects.get_or_create(user=user)
+        return Response(
+            {"token": token.key, "username": user.username},
+            status=status.HTTP_201_CREATED,
+        )
+
+
+class LoginView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        username = request.data.get("username")
+        password = request.data.get("password")
+
+        if not username or not password:
+            return Response(
+                {"detail": "Username and password are required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        from django.contrib.auth import authenticate
+        user = authenticate(username=username, password=password)
+        if not user:
+            return Response(
+                {"detail": "Invalid credentials."},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+        token, _ = Token.objects.get_or_create(user=user)
+        return Response(
+            {"token": token.key, "username": user.username},
+            status=status.HTTP_200_OK,
         )

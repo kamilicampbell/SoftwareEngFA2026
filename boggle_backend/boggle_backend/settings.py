@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'rest_framework.authtoken',
     'api'
 ]
 
@@ -140,3 +141,14 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'https://' + os.environ.get('CODIO_HOSTNAME') + '-5173.codio.io',
 ]
+
+#AUTHENTICATION
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+}
